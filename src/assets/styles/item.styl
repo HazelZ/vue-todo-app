@@ -1,0 +1,64 @@
+.todo-item{
+  position:relative;
+  background-color:#fff;
+  font-size:24px;
+  border-bottom:1px solid rgba(0,0,0,0.06)
+  &:hover {
+    .delete:after{
+      content:'×'
+      }
+    }
+  label{
+    display:block;
+    padding:15px 60px 15px 15px;
+    margin-left:45px;
+    line-height:1.2;
+    transition:color .3s;
+    white-space:pre-line;
+    word-break:break-all;
+  }
+  &.completed {
+    label{
+      color:#d9d9d9;
+      text-decoration: line-through;
+    }  
+  }
+}
+.toggle{
+  text-align:center;
+  width:40px;
+  height:32px;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto 0;
+  border:none;
+  appearance:none;
+  outline:none;
+  &:after{
+    content: url('../../assets/imgs/ic_unchecked.png');
+  }
+  &:checked:after{
+    content:url('../../assets/imgs/ic_checked.png');
+    }
+}
+.delete{
+  position:absolute;
+  top:6px;
+  right:10px;
+  width:40px;
+  height:40px;
+  margin: auto 0;
+  font-size:30px;
+  color:rgba(0,139,139,0.45);
+  margin-bottom:11px;
+  transition:color .2s ease-out;
+  background-color:transparent;
+  -webkit-apperance:none;
+  apperance:none;
+  border:none;
+  outline:none;
+  cursor:pointer;
+}
